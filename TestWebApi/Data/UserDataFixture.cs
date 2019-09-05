@@ -14,7 +14,6 @@ namespace TestWebApi.Data
         public void Test_CreateDummyData_When_Called_Then_UserListCountIsFive()
         {
             UserData.CreateDummyData();
-
             UserData.userList.Count.Should().Be(5);
         }
         [Fact]
