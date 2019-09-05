@@ -16,6 +16,7 @@ namespace WebApi1.Controllers
         private static UserService userService = new UserService();
         public UserController()
         {
+           
         }
 
         // GET: api/User
@@ -23,15 +24,15 @@ namespace WebApi1.Controllers
         public ActionResult Get()
         {
             ViewBag.Response = userService.GetList();
-            return StatusCode(ViewBag.Response.statusCode, ViewBag);
+            return ViewBag;
         }
 
         // GET: api/User/5
         [HttpGet("{id}", Name = "Get")]
         public ActionResult Get(int id)
         {
-            ViewBag.Response = userService.GetSingle(id);
-            return StatusCode(ViewBag.Response.statusCode, ViewBag);
+           ViewBag.Response = userService.GetSingle(id);
+           return StatusCode(ViewBag.Response.statusCode, ViewBag);
         }
 
         // POST: api/User
@@ -39,7 +40,7 @@ namespace WebApi1.Controllers
         public ActionResult Post(UserModel newUser)
         {
             ViewBag.Response = userService.Create(newUser);
-            return StatusCode(ViewBag.Response.statusCode, ViewBag);
+            return ViewBag;
         }
 
         // PUT: api/User/5
@@ -47,15 +48,15 @@ namespace WebApi1.Controllers
         public ActionResult Put(int id, [FromBody] UserModel userDataUpdate)
         {
             ViewBag.Response = userService.Update(id, userDataUpdate);
-            return StatusCode(ViewBag.Response.statusCode, ViewBag);
+            return ViewBag;
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            ViewBag.Response = userService.Delete(id);
-            return StatusCode(ViewBag.Response.statusCode, ViewBag);
+             ViewBag.Response = userService.Delete(id);
+            return ViewBag;
         }
     }
 }

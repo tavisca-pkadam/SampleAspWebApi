@@ -16,6 +16,7 @@ namespace WebApi1.Controllers
         private static UserService userService = new UserService();
         public UserController()
         {
+
         }
 
         // GET: api/User

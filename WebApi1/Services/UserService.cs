@@ -9,11 +9,9 @@ namespace WebApi1.Services
 {
     public class UserService
     {
-        UserData userData;
-
         public UserService()
         {
-            userData = new UserData();
+            UserData.CreateDummyData();
         }
         public Response GetSingle(int id)
         {
