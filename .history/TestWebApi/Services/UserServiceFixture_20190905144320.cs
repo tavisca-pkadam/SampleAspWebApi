@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Xunit;
+using FluentAssertions;
+using WebApi1.Data;
+using WebApi1.Models;
+
+namespace TestWebApi.Data
+{
+    public class UserServiceFixture
+    {
+
+      
+
+    }
+}
