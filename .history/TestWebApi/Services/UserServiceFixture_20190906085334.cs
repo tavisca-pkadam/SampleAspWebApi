@@ -13,7 +13,7 @@ namespace TestWebApi.Data
     public class UserServiceFixture
     {
         [Fact]
-        public void Test_GetSingle_Returns_NullAndStatus400_On_NegativeId()
+        public void Test_GetSingle_Returns_NullAndStatus300_On_NegativeId()
         {
             var response = new Response();
             var userService = new UserService();
@@ -170,7 +170,7 @@ namespace TestWebApi.Data
         }
 
         [Fact]
-        public void Test_Delete_Returns_NullAndStatus400_On_NegativeId()
+        public void Test_Delete_Returns_NullAndStatus300_On_NegativeId()
         {
             var response = new Response();
             var userService = new UserService();
