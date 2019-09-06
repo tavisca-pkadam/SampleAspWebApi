@@ -23,7 +23,7 @@ namespace WebApi1.Services
             {
                 response.data = null;
                 response.message = "Invalid Index - Should Not Be Negative";
-                response.statusCode = 400;
+                response.statusCode = 404;
             }
             else
             {

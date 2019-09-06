@@ -23,7 +23,7 @@ namespace WebApi1.Services
             {
                 response.data = null;
                 response.message = "Invalid Index - Should Not Be Negative";
-                response.statusCode = 400;
+                response.statusCode = 404;
             }
             else
             {
@@ -32,7 +32,7 @@ namespace WebApi1.Services
                 {
                     response.data = user;
                     response.message = "Not Found User - Please Search For Another User";
-                    response.statusCode = 404 ;
+                    response.statusCode = 400;
                 }
                 else
                 {
@@ -63,7 +63,7 @@ namespace WebApi1.Services
             {
                 response.data = userList;
                 response.message = "No User Data Found";
-                response.statusCode = 404 ;
+                response.statusCode = 200;
             }
 
             return response;
@@ -148,7 +148,7 @@ namespace WebApi1.Services
             if (id < 0)
             {
                 response.message = "Ivalid Id";
-                response.statusCode = 400 ;
+                response.statusCode = 404;
             }
             else
             {

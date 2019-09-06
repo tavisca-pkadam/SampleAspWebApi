@@ -20,7 +20,7 @@ namespace TestWebApi.Data
 
             response.data = null;
             response.message = "Invalid Index - Should Not Be Negative";
-            response.statusCode = 400 ;
+            response.statusCode = 404;
             userService.GetSingle(-1).Should().BeEquivalentTo(response);
 
         }
@@ -179,7 +179,7 @@ namespace TestWebApi.Data
 
             response.data = null;
             response.message = "Ivalid Id";
-            response.statusCode = 400   ;
+            response.statusCode = 400  ;
 
             userService.Delete(-1).Should().BeEquivalentTo(response);
 

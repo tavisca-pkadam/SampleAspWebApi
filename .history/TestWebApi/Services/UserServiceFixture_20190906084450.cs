@@ -20,7 +20,7 @@ namespace TestWebApi.Data
 
             response.data = null;
             response.message = "Invalid Index - Should Not Be Negative";
-            response.statusCode = 400 ;
+            response.statusCode = 300;
             userService.GetSingle(-1).Should().BeEquivalentTo(response);
 
         }
@@ -80,7 +80,7 @@ namespace TestWebApi.Data
         }
 
         [Fact]
-        public void Test_Create_Returns_RequestDataAndStatus404_On_AgeBelow18()
+        public void Test_Create_Returns_RequestDataAndStatus100_On_AgeBelow18()
         {
             var response = new Response();
             var userService = new UserService();
@@ -90,14 +90,14 @@ namespace TestWebApi.Data
 
             response.data = newUser;
             response.message = "User Age To be 18+";
-            response.statusCode = 400  ;
+            response.statusCode = 100;
 
             userService.Create(newUser).Should().BeEquivalentTo(response);
 
             UserData.ClearDummyData();
         }
         [Fact]
-        public void Test_Create_Returns_RequestDataAndStatus404_On_IncompleteData()
+        public void Test_Create_Returns_RequestDataAndStatus100_On_IncompleteData()
         {
 
             var response = new Response();
@@ -108,7 +108,7 @@ namespace TestWebApi.Data
 
             response.data = newUser;
             response.message = "Incomplete Data";
-            response.statusCode = 400  ;
+            response.statusCode = 100;
 
             userService.Create(newUser).Should().BeEquivalentTo(response);
 
@@ -126,7 +126,7 @@ namespace TestWebApi.Data
 
             response.data = newUser;
             response.message = "Incomplete Data";
-            response.statusCode = 400 ;
+            response.statusCode = 100;
 
             userService.Create(newUser).Should().BeEquivalentTo(response);
 
@@ -134,7 +134,7 @@ namespace TestWebApi.Data
         }
 
         [Fact]
-        public void Test_Update_Returns_RequestDataAndStatus404_On_IncompleteData()
+        public void Test_Update_Returns_RequestDataAndStatus100_On_IncompleteData()
         {
             var response = new Response();
             var userService = new UserService();
@@ -144,7 +144,7 @@ namespace TestWebApi.Data
 
             response.data = newUser;
             response.message = "Incomplete Data";
-            response.statusCode = 400  ;
+            response.statusCode = 100;
 
             userService.Update(1, newUser).Should().BeEquivalentTo(response);
 
@@ -162,7 +162,7 @@ namespace TestWebApi.Data
 
             response.data = newUser;
             response.message = "Ivalid Id";
-            response.statusCode = 400  ;
+            response.statusCode = 300;
 
             userService.Update(-1, newUser).Should().BeEquivalentTo(response);
 
@@ -179,7 +179,7 @@ namespace TestWebApi.Data
 
             response.data = null;
             response.message = "Ivalid Id";
-            response.statusCode = 400   ;
+            response.statusCode = 300;
 
             userService.Delete(-1).Should().BeEquivalentTo(response);
 

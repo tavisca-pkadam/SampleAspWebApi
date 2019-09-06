@@ -8497,11 +8497,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pakadam\\source\\repos\\WebApi1\\TestWebApi\\TestWebApi.csproj",
+      "projectUniqueName": "c:\\Users\\pakadam\\source\\repos\\WebApi1\\TestWebApi\\TestWebApi.csproj",
       "projectName": "TestWebApi",
-      "projectPath": "C:\\Users\\pakadam\\source\\repos\\WebApi1\\TestWebApi\\TestWebApi.csproj",
+      "projectPath": "c:\\Users\\pakadam\\source\\repos\\WebApi1\\TestWebApi\\TestWebApi.csproj",
       "packagesPath": "C:\\Users\\pakadam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pakadam\\source\\repos\\WebApi1\\TestWebApi\\obj\\",
+      "outputPath": "c:\\Users\\pakadam\\source\\repos\\WebApi1\\TestWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8520,8 +8520,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\pakadam\\source\\repos\\WebApi1\\WebApi1\\WebApi1.csproj": {
-              "projectPath": "C:\\Users\\pakadam\\source\\repos\\WebApi1\\WebApi1\\WebApi1.csproj"
+            "c:\\Users\\pakadam\\source\\repos\\WebApi1\\WebApi1\\WebApi1.csproj": {
+              "projectPath": "c:\\Users\\pakadam\\source\\repos\\WebApi1\\WebApi1\\WebApi1.csproj"
             }
           }
         }
