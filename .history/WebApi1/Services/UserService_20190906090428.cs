@@ -111,7 +111,10 @@ namespace WebApi1.Services
             // Test_Update_When_Called_Returns_UpdatedUserModel
             var response = new Response();
 
-            
+            var validateAddress = user.Address.Length > 1;
+            var validateFirstName = user.Address.Length > 1;
+            var validateLastName = user.Address.Length > 1;
+            var validateAge = user.Age < 18;
 
             response.data = user;
 
@@ -125,7 +128,7 @@ namespace WebApi1.Services
                 response.message = "User Age To be 18+";
                 response.statusCode = 400;
             }
-            else if (
+            elseif (
                         UserValidation.ValidateAddress(user.Address) &&
                         UserValidation.ValidateFirstName(user.FirstName) &&
                         UserValidation.ValidateLastName(user.LastName)

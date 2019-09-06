@@ -125,7 +125,7 @@ namespace WebApi1.Services
                 response.message = "User Age To be 18+";
                 response.statusCode = 400;
             }
-            else if (
+            elseif (
                         UserValidation.ValidateAddress(user.Address) &&
                         UserValidation.ValidateFirstName(user.FirstName) &&
                         UserValidation.ValidateLastName(user.LastName)

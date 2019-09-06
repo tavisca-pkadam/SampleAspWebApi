@@ -32,7 +32,7 @@ namespace WebApi1.Services
                 {
                     response.data = user;
                     response.message = "Not Found User - Please Search For Another User";
-                    response.statusCode = 404;
+                    response.statusCode = 404 ;
                 }
                 else
                 {
@@ -63,7 +63,7 @@ namespace WebApi1.Services
             {
                 response.data = userList;
                 response.message = "No User Data Found";
-                response.statusCode = 404;
+                response.statusCode = 404 ;
             }
 
             return response;
@@ -78,23 +78,19 @@ namespace WebApi1.Services
             // Test_Create_When_Called_Returns_CreatedUserModel
             var response = new Response();
 
-
+          
 
             response.data = user;
 
             if (user.Age < 19)
             {
                 response.message = "User Age To be 18+";
-                response.statusCode = 400;
+                response.statusCode = 400  ;
             }
-            else if (
-                        UserValidation.ValidateAddress(user.Address) &&
-                        UserValidation.ValidateFirstName(user.FirstName) &&
-                        UserValidation.ValidateLastName(user.LastName)
-                        )
+            else if (UserValidation.ValidateAddress(user.Address) && UserValidation.ValidateAddress(user.Address)  && validateFirstName && validateLastName)
             {
                 response.message = "Incomplete Data";
-                response.statusCode = 400;
+                response.statusCode = 400  ;
             }
             else
             {
@@ -111,28 +107,27 @@ namespace WebApi1.Services
             // Test_Update_When_Called_Returns_UpdatedUserModel
             var response = new Response();
 
-            
+            var validateAddress = user.Address.Length > 1;
+            var validateFirstName = user.Address.Length > 1;
+            var validateLastName = user.Address.Length > 1;
+            var validateAge = user.Age < 18;
 
             response.data = user;
 
             if (id < 0)
             {
                 response.message = "Ivalid Id";
-                response.statusCode = 400;
+                response.statusCode = 400  ;
             }
             else if (user.Age < 18)
             {
                 response.message = "User Age To be 18+";
-                response.statusCode = 400;
+                response.statusCode = 400  ;
             }
-            else if (
-                        UserValidation.ValidateAddress(user.Address) &&
-                        UserValidation.ValidateFirstName(user.FirstName) &&
-                        UserValidation.ValidateLastName(user.LastName)
-                        )
+            else if (validateAddress && validateFirstName && validateFirstName && validateLastName)
             {
                 response.message = "Incomplete Data";
-                response.statusCode = 400;
+                response.statusCode = 400  ;
             }
             else
             {
@@ -150,7 +145,7 @@ namespace WebApi1.Services
             if (id < 0)
             {
                 response.message = "Ivalid Id";
-                response.statusCode = 400;
+                response.statusCode = 400 ;
             }
             else
             {
