@@ -61,21 +61,17 @@ namespace WebApi1.Services
             return isValid;
         }
 
-        public static void ValidationStatusAndOperation(bool newValidationStatus, ref bool isValid)
-        {
-            isValid = isValid && newValidationStatus;
-        }
+    
 
         public static bool TryValidateAllFields(UserModel userModel, List<string> message)
         {
-            bool isValid = true;
+            bool isValid = TryValidateId(userModel.Id, message) &&
+                            TryValidateAddress(userModel.Address, message) &&
+                            TryValidateFirstName(userModel.FirstName, message) &&
+                            TryValidateLastName(userModel.LastName, message) &&
+                            TryValidateAge(userModel.Age, message);
 
-            ValidationStatusAndOperation(TryValidateId(userModel.Id, message), ref isValid);
-            ValidationStatusAndOperation(TryValidateAddress(userModel.Address, message), ref isValid);
-            ValidationStatusAndOperation(TryValidateFirstName(userModel.FirstName, message), ref isValid);
-            ValidationStatusAndOperation(TryValidateLastName(userModel.LastName, message), ref isValid);
-            ValidationStatusAndOperation(TryValidateAge(userModel.Age, message), ref isValid);
-           
+
             return isValid;
         }
 

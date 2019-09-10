@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApi1 {
+namespace WebApi1 { 
     public class Response {
         public Object data;
         public List<string> message;
@@ -15,4 +15,4 @@ namespace WebApi1 {
             message = new List<string>();
         }
     }
-}
+}   

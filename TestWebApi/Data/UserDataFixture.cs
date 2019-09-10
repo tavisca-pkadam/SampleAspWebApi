@@ -85,7 +85,7 @@ namespace TestWebApi.Data {
 
             var newUser = new UserModel {
                 FirstName = "Dharni",
-                LastName = "Siddique",
+                LastName = "Siddique", 
                 Address = "Nagpur",
                 Age = 24,
                 Id = 5
