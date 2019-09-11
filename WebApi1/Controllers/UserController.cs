@@ -17,8 +17,11 @@ namespace WebApi1.Controllers {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(UserController));
 
 
-        private static UserService userService = new UserService ();
-        public UserController () { }
+        private static IService userService;
+
+        public UserController (IService service) {
+            userService = service;
+        }
 
         // GET: api/User
         [HttpGet]

@@ -15,4 +15,3 @@ C:\Users\pakadam\source\repos\WebApi1\TestWebApi\bin\Debug\netcoreapp2.2\WebApi1
 C:\Users\pakadam\source\repos\WebApi1\TestWebApi\obj\Debug\netcoreapp2.2\TestWebApi.csproj.CopyComplete
 C:\Users\pakadam\source\repos\WebApi1\TestWebApi\obj\Debug\netcoreapp2.2\TestWebApi.dll
 C:\Users\pakadam\source\repos\WebApi1\TestWebApi\obj\Debug\netcoreapp2.2\TestWebApi.pdb
-c:\Users\pakadam\source\repos\WebApi1\TestWebApi\bin\Debug\netcoreapp2.2\log4net.config

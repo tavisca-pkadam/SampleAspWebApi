@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using WebApi1.Models;
 
 namespace WebApi1.Services {
-    interface IService {
+    public interface IService {
         Response GetSingle (int id);
 
         Response GetList ();
